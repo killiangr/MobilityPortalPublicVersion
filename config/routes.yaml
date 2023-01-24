@@ -1,0 +1,25 @@
+root_redirect:
+  path: /
+  controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController
+  requirements:
+    _locale: '%app_locales%'
+  defaults:
+    path: /%locale%
+    permanent: true
+
+homepage:
+  path: /{_locale}
+  controller:  App\Controller\PortalController::index
+  requirements:
+    _locale: '%app_locales%'
+  defaults:
+    _locale: '%locale%'
+
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+
+

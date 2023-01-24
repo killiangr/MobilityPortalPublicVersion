@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="vRqYLlx" resname="Multipurpose">
+        <source>Multipurpose</source>
+        <target>Multipurpose</target>
+      </trans-unit>
+      <trans-unit id="3_0W4jm" resname="Mobility Portal">
+        <source>Mobility Portal</source>
+        <target>Mobility Portal</target>
+      </trans-unit>
+      <trans-unit id="KXAjCYi" resname="Budget Line Dashboard">
+        <source>Budget Line Dashboard</source>
+        <target>Budget Line Dashboard</target>
+      </trans-unit>
+      <trans-unit id="AulabNx" resname="Select Budget:">
+        <source>Select Budget:</source>
+        <target>Select Budget:</target>
+      </trans-unit>
+      <trans-unit id="pSrOQg8" resname="All">
+        <source>All</source>
+        <target>All</target>
+      </trans-unit>
+      <trans-unit id="zr7MxGt" resname="Budget Line">
+        <source>Budget Line</source>
+        <target>Budget Line</target>
+      </trans-unit>
+      <trans-unit id="NpQtVrJ" resname="Global View">
+        <source>Global View</source>
+        <target>Global View</target>
+      </trans-unit>
+      <trans-unit id="HGIl7HC" resname="Budget">
+        <source>Budget</source>
+        <target>Budget</target>
+      </trans-unit>
+      <trans-unit id="uDIALaK" resname="Invoice">
+        <source>Invoice</source>
+        <target>Invoice</target>
+      </trans-unit>
+      <trans-unit id="cr1Tgbs" resname="BUDGET LINE">
+        <source>BUDGET LINE</source>
+        <target>BUDGET LINE</target>
+      </trans-unit>
+      <trans-unit id="sq5SM4B" resname="Line Nature">
+        <source>Line Nature</source>
+        <target>Line Nature</target>
+      </trans-unit>
+      <trans-unit id="mFlZeFM" resname="Project">
+        <source>Project</source>
+        <target>Project</target>
+      </trans-unit>
+      <trans-unit id="1az9gzD" resname="Society">
+        <source>Society</source>
+        <target>Society</target>
+      </trans-unit>
+      <trans-unit id="DmY3P0X" resname="Label">
+        <source>Label</source>
+        <target>Label</target>
+      </trans-unit>
+      <trans-unit id="mOM7DzE" resname="Applications">
+        <source>Applications</source>
+        <target>Applications</target>
+      </trans-unit>
+      <trans-unit id="RyWQrpd" resname="Provider">
+        <source>Provider</source>
+        <target>Provider</target>
+      </trans-unit>
+      <trans-unit id="gx6HYxJ" resname="Accounting Code">
+        <source>Accounting Code</source>
+        <target>Accounting Code</target>
+      </trans-unit>
+      <trans-unit id="XP5ubWP" resname="Amount OT">
+        <source>Amount OT</source>
+        <target>Amount OT</target>
+      </trans-unit>
+      <trans-unit id="t67t8wz" resname="Remaining Amount">
+        <source>Remaining Amount</source>
+        <target>Remaining Amount</target>
+      </trans-unit>
+      <trans-unit id="ZM.xMZ0" resname="Action">
+        <source>Action</source>
+        <target>Action</target>
+      </trans-unit>
+      <trans-unit id="D5lam8." resname="no records found">
+        <source>no records found</source>
+        <target>no records found</target>
+      </trans-unit>
+      <trans-unit id="8hEHf1A" resname="New Budget Line">
+        <source>New Budget Line</source>
+        <target>New Budget Line</target>
+      </trans-unit>
+      <trans-unit id="Zxub4va" resname="Create New Budget Line">
+        <source>Create New Budget Line</source>
+        <target>Create New Budget Line</target>
+      </trans-unit>
+      <trans-unit id="mQV4zyO" resname="Upload Files">
+        <source>Upload Files</source>
+        <target>Upload Files</target>
+      </trans-unit>
+      <trans-unit id="vllyunJ" resname="General Setup">
+        <source>General Setup</source>
+        <target>General Setup</target>
+      </trans-unit>
+      <trans-unit id="Arb5CjZ" resname="New Parameter">
+        <source>New Parameter</source>
+        <target>New Parameter</target>
+      </trans-unit>
+      <trans-unit id="5p_FpZq" resname="Authentification">
+        <source>Authentification</source>
+        <target>Authentification</target>
+      </trans-unit>
+      <trans-unit id="4oHU0zo" resname="GENERAL SETUP">
+        <source>GENERAL SETUP</source>
+        <target>GENERAL SETUP</target>
+      </trans-unit>
+      <trans-unit id="D3kirH1" resname="NEW PARAMETER">
+        <source>NEW PARAMETER</source>
+        <target>NEW PARAMETER</target>
+      </trans-unit>
+      <trans-unit id="OEOXHc." resname="ID">
+        <source>ID</source>
+        <target>ID</target>
+      </trans-unit>
+      <trans-unit id="B6nXtKm" resname="CODE">
+        <source>CODE</source>
+        <target>CODE</target>
+      </trans-unit>
+      <trans-unit id="nMNYQFF" resname="DESCRIPTION">
+        <source>DESCRIPTION</source>
+        <target>DESCRIPTION</target>
+      </trans-unit>
+      <trans-unit id="G6E6pjK" resname="ACTIONS">
+        <source>ACTIONS</source>
+        <target>ACTIONS</target>
+      </trans-unit>
+      <trans-unit id="kj9h0Pk" resname="Invoice Line Dashboard">
+        <source>Invoice Line Dashboard</source>
+        <target>Invoice Line Dashboard</target>
+      </trans-unit>
+      <trans-unit id="uKxuqvJ" resname="Invoice Line">
+        <source>Invoice Line</source>
+        <target>Invoice Line</target>
+      </trans-unit>
+      <trans-unit id="CYUwt9R" resname="INVOICE LINE">
+        <source>INVOICE LINE</source>
+        <target>INVOICE LINE</target>
+      </trans-unit>
+      <trans-unit id="wHycuUw" resname="Invoice Number">
+        <source>Invoice Number</source>
+        <target>Invoice Number</target>
+      </trans-unit>
+      <trans-unit id="DyT8_zW" resname="Invoice Date">
+        <source>Invoice Date</source>
+        <target>Invoice Date</target>
+      </trans-unit>
+      <trans-unit id="yNSuNy1" resname="New Invoice Line">
+        <source>New Invoice Line</source>
+        <target>New Invoice Line</target>
+      </trans-unit>
+      <trans-unit id="OA3VwxA" resname="Create New Invoice Line">
+        <source>Create New Invoice Line</source>
+        <target>Create New Invoice Line</target>
+      </trans-unit>
+      <trans-unit id="OnhpU4i" resname="Home">
+        <source>Home</source>
+        <target>Home</target>
+      </trans-unit>
+      <trans-unit id="EMK7NyL" resname="Budget Setup">
+        <source>Budget Setup</source>
+        <target>Budget Setup</target>
+      </trans-unit>
+      <trans-unit id="MxELDMT" resname="Market Data">
+        <source>Market Data</source>
+        <target>Market Data</target>
+      </trans-unit>
+      <trans-unit id="3DgIiMT" resname="Loading">
+        <source>Loading</source>
+        <target>Loading</target>
+      </trans-unit>
+      <trans-unit id="pTvK_2f" resname="Dashboards">
+        <source>Dashboards</source>
+        <target>Dashboards</target>
+      </trans-unit>
+      <trans-unit id="VvEo_Mp" resname="GLOBAL VIEW">
+        <source>GLOBAL VIEW</source>
+        <target>GLOBAL VIEW</target>
+      </trans-unit>
+      <trans-unit id="RZK2kCl" resname="Invoice N°">
+        <source>Invoice N°</source>
+        <target>Invoice N°</target>
+      </trans-unit>
+      <trans-unit id="y2CutB_" resname="Amount R">
+        <source>Amount R</source>
+        <target>Amount R</target>
+      </trans-unit>
+      <trans-unit id="ma9mBv_" resname="Menu">
+        <source>Menu</source>
+        <target>Menu</target>
+      </trans-unit>
+      <trans-unit id="TtIlmMw" resname="Countries / Colors">
+        <source>Countries / Colors</source>
+        <target>Countries / Colors</target>
+      </trans-unit>
+      <trans-unit id="HmJFAJ1" resname="Pictures">
+        <source>Pictures</source>
+        <target>Pictures</target>
+      </trans-unit>
+      <trans-unit id="0ip1_9y" resname="Datasheet">
+        <source>Datasheet</source>
+        <target>Datasheet</target>
+      </trans-unit>
+      <trans-unit id="Vm7vGIZ" resname="Export / Import">
+        <source>Export / Import</source>
+        <target>Export / Import</target>
+      </trans-unit>
+      <trans-unit id="SAwq4qZ" resname="Synchro BA">
+        <source>Synchro BA</source>
+        <target>Synchro BA</target>
+      </trans-unit>
+      <trans-unit id="Rttzd6k" resname="Website Publish Preview">
+        <source>Website Publish Preview</source>
+        <target>Website Publish Preview</target>
+      </trans-unit>
+      <trans-unit id="q8fpiSg" resname="Files">
+        <source>Files</source>
+        <target>Files</target>
+      </trans-unit>
+      <trans-unit id="et.MP7G" resname="MOBILITY PORTAL">
+        <source>MOBILITY PORTAL</source>
+        <target>MOBILITY PORTAL</target>
+      </trans-unit>
+      <trans-unit id="ZIxPmU9" resname="Acceed To Mobility Portal">
+        <source>Acceed To Mobility Portal</source>
+        <target>Acceed To Mobility Portal</target>
+      </trans-unit>
+      <trans-unit id="q5O_IOG" resname="Budgets / Invoices">
+        <source>Budgets / Invoices</source>
+        <target>Budgets / Invoices</target>
+      </trans-unit>
+      <trans-unit id="QnZWJKB" resname="General Setup Options">
+        <source>General Setup Options</source>
+        <target>General Setup Options</target>
+      </trans-unit>
+      <trans-unit id="am2uG4d" resname="General Setup Dashboard">
+        <source>General Setup Dashboard</source>
+        <target>General Setup Dashboard</target>
+      </trans-unit>
+      <trans-unit id="EQjAnL." resname="Add Parameter">
+        <source>Add Parameter</source>
+        <target>Add Parameter</target>
+      </trans-unit>
+      <trans-unit id="i2KqTX3" resname="Budget Options">
+        <source>Budget Options</source>
+        <target>Budget Options</target>
+      </trans-unit>
+      <trans-unit id="kG.0F52" resname="Dashboard / Manage Budgets, Invoices">
+        <source>Dashboard / Manage Budgets, Invoices</source>
+        <target>Dashboard / Manage Budgets, Invoices</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

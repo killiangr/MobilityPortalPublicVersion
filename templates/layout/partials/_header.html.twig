@@ -1,0 +1,21 @@
+<!--begin::Header-->
+<div id="kt_app_header" class="app-header">
+	<!--begin::Header container-->
+	<div class="app-container container-fluid d-flex align-items-stretch justify-content-between bg-white" id="kt_app_header_container">
+		<!--begin::Logo-->
+		<div class="d-flex  flex-grow-1 flex-lg-grow-0 ">
+			<a href="/">
+				<img alt="Logo" class="h-50px h-lg-60px app-sidebar-logo-default " src="assets/media/mymedia/LogoMP.png" />
+			</a>
+		</div>
+		<!--end::Logo-->
+		<!--begin::Header wrapper-->
+		<div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1" id="kt_app_header_wrapper">
+			{% include 'layout/partials/header/_menu/_menu.html.twig' %}
+			{% include 'layout/partials/header/_navbar.html.twig' %}
+		</div>
+		<!--end::Header wrapper-->
+	</div>
+	<!--end::Header container-->
+</div>
+<!--end::Header-->

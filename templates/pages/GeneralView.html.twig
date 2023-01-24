@@ -1,0 +1,351 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<!-- begin::App -->
+<div class="container-fluid">
+  <div class="d-flex flex-column flex-root app-root" id="kt_app_root">
+    <!-- begin::Page -->
+    <div class="app-page flex-column flex-column-fluid" id="kt_app_page">
+      {% include 'layout/partials/_header.html.twig' %}
+      <!-- begin::Wrapper -->
+      <div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
+        <!-- begin::Main -->
+        <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+          <!-- begin::Content wrapper -->
+          <div class="d-flex flex-column flex-column-fluid">
+            <!--begin::Toolbar-->
+              <div id="kt_app_toolbar" class="app-toolbar mb-4">
+                <!--begin::Toolbar container-->
+                <div id="kt_app_toolbar_container" class="app-container container-fluid d-flex flex-stack">
+                  <!--begin::Page title-->
+                  <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+                    <!--begin::Title-->
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{'Multipurpose'|trans}}</h1>
+                    <!--end::Title-->
+                    <!--begin::Breadcrumb-->
+                    <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+                      <!--begin::Item-->
+                      <li class="breadcrumb-item text-muted">
+                        <a href="{{path('home')}}" class="text-muted text-hover-primary">{{'Mobility Portal'|trans}}</a>
+                      </li>
+                      <!--end::Item-->
+                      <!--begin::Item-->
+                      <li class="breadcrumb-item">
+                        <span class="bullet bg-gray-400 w-5px h-2px"></span>
+                      </li>
+                      <!--end::Item-->
+                      <!--begin::Item-->
+                      <li class="breadcrumb-item text-muted">{{'Global View'|trans}}</li>
+                      <!--end::Item-->
+                    </ul>
+                    <!--end::Breadcrumb-->
+                  </div>
+                  <!--end::Page title-->
+                </div>
+                <!--end::Toolbar container-->
+              </div>
+              <!--end::Toolbar-->
+            <!-- begin::Content -->
+            <div id="kt_app_content" class="app-content flex-column-fluid">
+              <!-- begin::Content container -->
+              <div id="kt_app_content_container" class="app-container container-fluid ">
+                <!--begin::Navbar-->
+                <div class="card shadow">
+                    <div class="card-body pt-8 pb-0">
+                        <!--begin::Details-->
+                        <div class="d-flex flex-wrap flex-sm-nowrap">
+                            <!--begin::Wrapper-->
+                            <div class="flex-grow-1">
+                                <!--begin::Head-->
+                                <div class="d-flex justify-content-between align-items-start flex-wrap mb-4">
+                                    <!--begin::Details-->
+                                    <div class="d-flex flex-column">
+                                        <!--begin::Status-->
+                                        <div class="d-flex align-items-center mb-1">
+                                            <!--begin::Info-->
+                                            <div class="d-flex flex-wrap justify-content-start mb-4">
+                                                <!--begin::Form-->
+                                                <form class="px-3" style="width: 280px;" id="filter-form2">
+                                                    <label class="mb-1" for="budget-select2">{{'Select Budget:'|trans}}</label>
+                                                    <select id="budget-select2" class="form-select form-select-solid">
+                                                        <option value="all">{{'All'|trans}}</option>
+                                                        {% set uniqueYears = [] %}
+                                                        {% for budget_line in budget_lines %}
+                                                            {% if budget_line.Year not in uniqueYears %}
+                                                                {% set uniqueYears = uniqueYears|merge([budget_line.Year]) %}
+                                                                <option value="{{ budget_line.Year }}">{{ budget_line.Year }}</option>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    </select>
+                                                </form>
+
+                                                <!--end::Form-->
+                                                <!--begin::Form-->
+                                                <form class="px-3" style="width: 280px" id="filter-form3">
+                                                    <label class="mb-1" for="budget-select2">{{'Select Manager:'|trans}}</label>
+                                                    <select id="budget-select3" class="form-select form-select-solid">
+                                                        <option value="all">{{'All'|trans}}</option>
+                                                        {% set uniqueYears = [] %}
+                                                        {% for budget_line in budget_lines %}
+                                                            {% if budget_line.Manager not in uniqueYears %}
+                                                                {% set uniqueYears = uniqueYears|merge([budget_line.Manager]) %}
+                                                                <option value="{{ budget_line.Manager }}">{{ budget_line.Manager }}</option>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    </select>
+                                                </form>
+
+                                                <!--end::Form-->
+                                              </div>
+                                              <!--end::Info-->
+                                        </div>
+                                        <!--end::Status-->
+                                    </div>
+                                    <!--end::Details-->
+                                    <div class="card-toolbar">
+                                    <div class="border border-gray-300  rounded min-w-125px py-3 px-4">
+                                      <!--begin::Number-->
+                                      <div class="d-flex align-items-center">
+                                          <a href="{{path('app_budget_line_new')}}" type="button" class="btn me-4 text-white" style="background-color: #3598DC "> {{'Budget Line'|trans}} ✚</a>
+                                          <a href="{{path('app_invoice_budget_line_new')}}"  type="button" class="btn text-white" style="background-color: #2C3E50 "> {{'Invoice Line'|trans}} ✚</a>
+                                      </div>
+                                      <!--end::Number-->
+                                    </div>
+                                    
+                                    </div>
+                                    
+                                </div>
+                                <!--end::Head-->
+                            </div>
+                            <!--end::Wrapper-->
+                        </div>
+                        <!--end::Details-->
+                        <div class="separator"></div>
+                        <!--begin::Nav-->
+                        <ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bold">
+                            <!--begin::Nav item-->
+                            <li class="nav-item">
+                                <a class="nav-link text-active-primary py-5 me-6 active" href="{{path('GeneralView')}}">{{'Global View'|trans}}</a>
+                            </li>
+                            <!--end::Nav item-->
+                            <!--begin::Nav item-->
+                            <li class="nav-item">
+                                <a class="nav-link text-active-primary py-5 me-6 " href="{{path('app_budget_line_index')}}">{{'Budget'|trans}}</a>
+                            </li>
+                            <!--end::Nav item-->
+                            <!--begin::Nav item-->
+                            <li class="nav-item">
+                                <a class="nav-link text-active-primary py-5 me-6" href="#">{{'Invoice'|trans}}</a>
+                            </li>
+                            <!--end::Nav item-->
+                        </ul>
+                        <!--end::Nav-->
+                    </div>
+                </div>
+                <!--end::Navbar-->
+              <!-- end::Row -->
+            </div>
+            <!-- end::Content container -->
+            <br>
+              <!-- begin::Content container -->
+              <div id="kt_app_content_container" class="app-container container-fluid">
+                <!-- begin::Row -->
+                <div class="row ">
+                <div class="col-xl-15 mb-4 mb-xl-4 ">
+                  <div class="card card-bordered">
+                  <!-- begin::Header -->
+                    <div class="card-header bg-dark">
+                      <h1 class="card-title align-items-start flex-column">
+                        <span class="card-label bold text-white display">
+                          {{ 'GLOBAL VIEW'|trans }}
+                        </span>
+                      </h1>
+                    </div>
+                    <!-- end::Header -->
+                    <div class="card-body">
+                      <div class="table-scrollable" style="max-height: 950px; overflow:auto;">
+                        <table id="GeneralView" class="table table-bordered table-hover gy-3 gs-3">
+                          <thead>
+                            <tr class=" fs-6 fw-bold text-white " style="background-color: #2C3E50; ">
+                              <th class="min-w-20px" style="width: 50px;">
+                                #
+                              </th>
+                              <th class="min-w-20px"  >
+                                {{ 'Line Nature'|trans }}
+                              </th>
+                              <th class="min-w-20px">
+                                {{ 'Project'|trans }}
+                              </th>
+                              <th class="min-w-20px">
+                                {{ 'Society'|trans }}
+                              </th>
+                              <th class="min-w-20px" style="width: 150px;">
+                               {{ 'Label'|trans }}
+                              </th>
+                              <th class="min-w-20px">
+                               {{'Applications'|trans }}
+                              </th>
+                              <th class="min-w-20px">
+                                {{ 'Provider'|trans }}
+                              </th>
+                              <th class="min-w-20px" style="width: 125px;">
+                                {{ 'Accounting Code'|trans }}
+                              </th>
+                              <th class="min-w-20px">
+                                {{ 'Invoice N°'|trans }}
+                              </th>
+                              <th class="min-w-20px">
+                                {{ 'Invoice Date'|trans }}
+                              </th>
+                              <th class="min-w-20px">
+                                {{ 'Amount OT'|trans }}
+                              </th>
+                              <th class="min-w-20px">
+                                {{ 'Amount R'|trans }}
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          {% for budget_line in budget_lines %}
+                              <tr class=" fw-bold" data-year="{{ budget_line.Year }}" data-Manager="{{ budget_line.Manager }}" style="{% if budget_line.LineNature == 'Ligne Budget' %}background-color: #E5E5E5;{% endif %}">
+                                <td>
+                                  {% if budget_line.LineNature == 'Ligne Budget' %}
+                                    {{ budget_line.id }} 
+                                  {% else %}
+                                    {{ budget_line.LinkBudget }} 
+                                  {% endif %}
+                                </td>
+                                <td>
+                                  {{ budget_line.LineNature }}
+                                </td>
+                                <td>
+                                  {{ budget_line.Project }}
+                                </td>
+                                <td>
+                                  {{ budget_line.Society }}
+                                </td>
+                                <td>
+                                  {{ budget_line.label }}
+                                </td>
+                                <td>
+                                  {{ budget_line.application }}
+                                </td>
+                                <td>
+                                  {{ budget_line.provider }}
+                                </td>
+                                <td>
+                                  {{ budget_line.AccountingCode }}
+                                </td>
+                                <td>
+                                {{ budget_line.NumFacture }}
+                                </td>
+                                <td>
+                                {{budget_line.DateFacturation | date('d/m/Y')}}
+                                </td>
+                                <td>
+                                  {{ budget_line.AmountOT }}
+                                </td>
+                                <td>
+                                  {{ budget_line.RAmount }}
+                                </td>
+                              </tr>
+                            {% else %}
+                              <tr>
+                                <td colspan="13">
+                                  {{'no records found'|trans}}
+                                </td>
+                              </tr>
+                            {% endfor %}
+                            
+                          </tbody>
+                        </table>
+                        <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+                        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+                        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css"/>
+                        <script>
+                        $(document).ready(function() {
+                          $('#GeneralView').DataTable({
+                              "dom": 'Bfrtip',
+                              "buttons": [
+                                  {
+                                      extend: 'excel',
+                                      text: 'Download Excel',
+                                      exportOptions: {
+                                          columns: ':visible'
+                                      }
+                                  }
+                              ]
+                          });
+                        });
+                        </script>   
+                        <script>
+                          $(document).ready(function() {
+                              $('#budget-select2').on('change', function() {
+                                  var selectedBudget = $(this).val();
+                                  $('#GeneralView tbody tr').each(function() {
+                                      var rowBudget = $(this).data('year');
+                                      if (selectedBudget === 'all' || selectedBudget === rowBudget) {
+                                          $(this).show();
+                                      } else {
+                                          $(this).hide();
+                                      }
+                                  });
+                              });
+                          });
+                        </script>
+                        <script>
+                        $(document).ready(function() {
+                            $('#budget-select2').select2({
+                                placeholder: 'Select a budget',
+                            });
+                        });
+                      </script>  
+                      <script>
+                          $(document).ready(function() {
+                              $('#budget-select3').on('change', function() {
+                                  var selectedBudget = $(this).val();
+                                  $('#GeneralView tbody tr').each(function() {
+                                      var rowBudget = $(this).data('Manager');
+                                      if (selectedBudget === 'all' || selectedBudget === rowBudget) {
+                                          $(this).show();
+                                      } else {
+                                          $(this).hide();
+                                      }
+                                  });
+                              });
+                          });
+                        </script>
+                        <script>
+                        $(document).ready(function() {
+                            $('#budget-select3').select2({
+                                placeholder: 'Select a budget',
+                            });
+                        });
+                      </script>                  
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <!-- end::Row -->
+            </div>
+            <!-- end::Content container -->
+            
+          </div>
+          <!-- end::Content -->
+
+          <!-- end::Content wrapper -->
+        </div>
+        <!-- end:::Main -->
+      </div>
+      <!-- end::Wrapper -->
+    </div>
+    <!-- end::Page -->
+  </div>
+</div>
+<!-- end::App -->
+
+
+{% endblock %}

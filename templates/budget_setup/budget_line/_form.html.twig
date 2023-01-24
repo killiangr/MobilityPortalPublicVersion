@@ -1,0 +1,320 @@
+
+
+
+<div class="container">
+<!--begin::App-->
+<div class="d-flex flex-column flex-root app-root" id="kt_app_root">
+	<!--begin::Page-->
+	<div class="app-page flex-column flex-column-fluid" id="kt_app_page">
+		{% include 'layout/partials/_header.html.twig' %}
+		<!--begin::Wrapper-->
+		<div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
+			<!--begin::Main-->
+			<div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+				<!--begin::Content wrapper-->
+				<div class="d-flex flex-column flex-column-fluid">
+					<!--begin::Toolbar-->
+                    <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6 mb-15">
+                        <!--begin::Toolbar container-->
+                        <div id="kt_app_toolbar_container" class="app-container container-fluid d-flex flex-stack">
+                        <!--begin::Page title-->
+                        <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+                            <!--begin::Title-->
+                            <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{'Multipurpose'|trans}}</h1>
+                            <!--end::Title-->
+                            <!--begin::Breadcrumb-->
+                            <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+                            <!--begin::Item-->
+                            <li class="breadcrumb-item text-muted">
+                                <a href="{{path('home')}}" class="text-muted text-hover-primary">{{'Mobility Portal'|trans}}</a>
+                            </li>
+                            <!--end::Item-->
+                            <!--begin::Item-->
+                            <li class="breadcrumb-item">
+                                <span class="bullet bg-gray-400 w-5px h-2px"></span>
+                            </li>
+                            <!--end::Item-->
+                            <!--begin::Item-->
+                            <li class="breadcrumb-item text-muted">
+                                <a href="{{path('app_budget_line_index')}}" class="text-muted text-hover-primary">{{'Budget Line Dashboard'|trans}}</a>
+                            </li>
+                            <!--end::Item-->
+                            <!--begin::Item-->
+                            <li class="breadcrumb-item">
+                                <span class="bullet bg-gray-400 w-5px h-2px"></span>
+                            </li>
+                            <!--end::Item-->
+                            <!--begin::Item-->
+                            <li class="breadcrumb-item text-muted">{{'New Budget Line'|trans}}</li>
+                            <!--end::Item-->
+                            </ul>
+                            <!--end::Breadcrumb-->
+                        </div>
+                        <!--end::Page title-->
+                        </div>
+                        <!--end::Toolbar container-->
+                    </div>
+                    <!--end::Toolbar-->
+                    <!--begin::Content-->
+                    <div id="kt_app_content" class="app-content flex-column-fluid">
+                            <!--begin::Content container-->
+                            <div id="kt_app_content_container" class="app-container container-fluid">
+                                <!--begin::Row-->
+                                <div class="row d-flex justify-content-center">
+                                <div class="col-xl-15 mb-4 mb-xl-4 ">
+                                    <div class="card card-bordered">
+                                        <div class="card-header bg-dark">
+                                            <h1 class="card-title align-items-start flex-column">
+                                                <span class="card-label font-weight-bolder text-white ">{{'Create New Budget Line'|trans}}</span>
+                                                
+                                            </h1>
+                                            <div class="card-toolbar">
+                                                <a class="btn btn-success btn-icon" href="{{ path('app_budget_line_index') }}">↩</a>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            {% form_theme form 'bootstrap_5_layout.html.twig'%}
+
+                                            {{ form_start(form, {'attr': {'class': 'form-horizontal'}}, {'form_type': 'App\Form\BudgetType'}) }}
+                                            <div class="row d-flex justify-content-center">
+                                                <div class="col-lg-4 mb-xl-4 mb-4">
+                                                <h4 class="text-muted text-hover-primary text-center mb-2">Database Links</h4>
+                                                <div class="border border-gray-300 rounded min-w-125px py-3 px-4">
+                                            
+                                                    <div class="form-group mb-8">
+                                                        {{ form_label(form.line_nature, "Type of Insert") }}
+                                                        {{ form_widget(form.line_nature) }}
+                                                        <div class="form-error">
+                                                            {{ form_errors(form.line_nature) }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group mb-8">
+                                                        {{ form_label(form.Year, "Select a Budget") }}
+                                                        {{ form_widget(form.Year) }}
+                                                        <div class="form-error">
+                                                            {{ form_errors(form.Year) }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group mb-8">
+                                                        {{ form_label(form.Manager, "Select a Manager") }}
+                                                        {{ form_widget(form.Manager) }}
+                                                        <div class="form-error">
+                                                            {{ form_errors(form.Manager) }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group mb-8">
+                                                        {{ form_label(form.HorsBudget, "Is it outside of the Budget ?") }}
+                                                        {{ form_widget(form.HorsBudget) }}
+                                                        <div class="form-error">
+                                                            {{ form_errors(form.HorsBudget) }}
+                                                        </div>
+                                                    </div>
+
+                                                    
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4 mb-xl-4">
+                                            <h4 class="text-muted text-hover-primary text-center mb-2">Select Parameters</h4>
+                                            <div class="border border-gray-300 rounded min-w-125px py-3 px-4">
+                                                    <div class="form-group mb-8">
+                                                        {{ form_label(form.Project, "Select a Project") }}
+                                                        {{ form_widget(form.Project) }}
+                                                        <div class="form-error">
+                                                            {{ form_errors(form.Project) }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group mb-8">
+                                                        {{ form_label(form.Society, "Select a Company") }}
+                                                        {{ form_widget(form.Society) }}
+                                                        <div class="form-error">
+                                                            {{ form_errors(form.Society) }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group mb-8">
+                                                        {{ form_label(form.application, "Select an Application") }}
+                                                        {{ form_widget(form.application) }}
+                                                        <div class="form-error">
+                                                            {{ form_errors(form.application) }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group mb-8">
+                                                        {{ form_label(form.provider, "Select a Provider") }}
+                                                        {{ form_widget(form.provider) }}
+                                                        <div class="form-error">
+                                                            {{ form_errors(form.provider) }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group mb-8">
+                                                        {{ form_label(form.accounting_code, "Select an Accounting Type") }}
+                                                        {{ form_widget(form.accounting_code) }}
+                                                        <div class="form-error">
+                                                            {{ form_errors(form.accounting_code) }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group mb-8">
+                                                        {{ form_label(form.DivisionService, "Select a Division Device") }}
+                                                        {{ form_widget(form.DivisionService) }}
+                                                        <div class="form-error">
+                                                            {{ form_errors(form.DivisionService) }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group mb-8">
+                                                        {{ form_label(form.Regroupement, "Select a Regroup") }}
+                                                        {{ form_widget(form.Regroupement) }}
+                                                        <div class="form-error">
+                                                            {{ form_errors(form.Regroupement) }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group mb-8">
+                                                        {{ form_label(form.Type, "Select a Type") }}
+                                                        {{ form_widget(form.Type) }}
+                                                        <div class="form-error">
+                                                            {{ form_errors(form.Type) }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group mb-8">
+                                                        {{ form_label(form.Axe4, "Axe4") }}
+                                                        {{ form_widget(form.Axe4) }}
+                                                        <div class="form-error">
+                                                            {{ form_errors(form.Axe4) }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group mb-8">
+                                                        {{ form_label(form.InvstCharge, "Select a Charge") }}
+                                                        {{ form_widget(form.InvstCharge) }}
+                                                        <div class="form-error">
+                                                            {{ form_errors(form.InvstCharge) }}
+                                                        </div>
+                                                    </div>
+
+                                                    
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-lg-4 mb-xl-4 mb-4">
+                                            <h4 class="text-muted text-hover-primary text-center mb-2">Input Description</h4>
+                                            <div class="border border-gray-300 rounded min-w-125px py-3 px-4">
+
+                                                    <div class="form-group mb-8">
+                                                        {{ form_label(form.label, "Input a Label") }}
+                                                        {{ form_widget(form.label) }}
+                                                        <div class="form-error">
+                                                            {{ form_errors(form.label) }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group mb-8">
+                                                        {{ form_label(form.Montant_Ouvert, "Input Open Amount") }}
+                                                        {{ form_widget(form.Montant_Ouvert) }}
+                                                        <div class="form-error">
+                                                            {{ form_errors(form.Montant_Ouvert) }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group mb-8">
+                                                        {{ form_label(form.Montant_Facture, "Montant Facture") }}
+                                                        {{ form_widget(form.Montant_Facture) }}
+                                                        <div class="form-error">
+                                                            {{ form_errors(form.Montant_Facture) }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group mb-8">
+                                                        {{ form_label(form.AmountOT, "Input the Amount Out Taxes") }}
+                                                        {{ form_widget(form.AmountOT) }}
+                                                        <div class="form-error">
+                                                            {{ form_errors(form.AmountOT) }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group mb-8">
+                                                        {{ form_label(form.RAmount, "Input the Remaining Amount") }}
+                                                        {{ form_widget(form.RAmount) }}
+                                                        <div class="form-error">
+                                                            {{ form_errors(form.RAmount) }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group mb-8">
+                                                        {{ form_label(form.Commentaire, "Input Commentary") }}
+                                                        {{ form_widget(form.Commentaire) }}
+                                                        <div class="form-error">
+                                                            {{ form_errors(form.Commentaire) }}
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            </div>
+                                            
+
+                                                    
+                                                
+                                            {{ form_end(form) }}
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end::Row-->
+                            </div>
+                            <!--end::Content container-->
+                        </div>
+                        <!--end::Content-->
+					
+				<!--end::Content wrapper-->
+			</div>
+			<!--end:::Main-->
+		</div>
+		<!--end::Wrapper-->
+	</div>
+	<!--end::Page-->
+</div>
+<!--end::App-->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
